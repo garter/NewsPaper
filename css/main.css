@@ -1,0 +1,27 @@
+
+/* 
+    Created on : 14.05.2015, 10:35:07
+    Author     : байрам
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.right{
+    text-align: right;
+}
+
+#header{
+    text-align: center;
+}
+
+#main_content{
+    overflow: hidden;
+}
+#left,#right{
+    min-height: 300px;
+    padding: 0 10px;
+    width: 230px;
+}
