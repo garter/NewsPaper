@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+    <head>
+        <title>Главная страница</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Опицание страницы">
+        <meta name="keywords" content="ключевыеб слова">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        
+    </head>
+    <body>
+        <div id="content">
+            <div id="header">
+                Header
+            </div>
+          
+            <div id="main_content">
+                <div id="left">
+                    <h2>Меню</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Свежые новости</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Мировые новости</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Региональные новости</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">Подписка на новости</a>
+                        </li>
+                    </ul>
+                    <h2>Вход на сайт</h2>
+                    <form name="form_auth" action="#" method="post">
+                        <table>
+                            <tr>
+                                <td> Логин:</td>
+                                <td><input type="text" name="login"> </td>
+                            </tr>
+                            <tr>
+                                <td> Пароль: </td>
+                                <td><input type="password" name="password"> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="submit" name="send_auth" value="Войти"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"> 
+                                    <a href="#">Зарегистрироваться</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div id="right">
+                    <form name="search" action="#" method="get">
+                        <p>
+                            Поиск: <input type="text" name="words">
+                        </p>
+                        <p>
+                            <input type="submit" name="search" value="Искать">
+                        </p>
+                    </form>
+                    <h2>Реклама</h2>
+                    <div id="banner">Тут будеть реклама</div>
+                    <div id="banner">Тут будеть реклама</div>
+                </div>
+                <div id="center">                   
+                    <div class="article">
+                        <h1>Загаловок статьии.....</h1>
+                        <p>  текст статьии тектст </p>
+                        <p>  текст статьии тектст </p>
+                        <p >
+                            <span >дата публикации </span>
+                        </p>
+                    </div>
+                    
+                </div><!--здесь заканчевается div #center-->
+             
+            </div><!--здесь заканчевается div #main_content-->
+            <div id="footer">
+                <p> Все права защищены © 2015 </p>
+            </div>
+        </div>
+    </body>
+</html>
