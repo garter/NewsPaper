@@ -3,25 +3,104 @@
     Created on : 14.05.2015, 10:35:07
     Author     : байрам
 */
+/* font-family: "UbuntuLight"; */
+@font-face {
+    font-family: "Ubuntu Light";
+    src: url("fonts/Ubuntu-Light.ttf");
+    font-style: light;
+    font-weight: normal;
+}
 
 body{
     margin: 0;
     padding: 0;
+    font-family: Ubuntu, 'Ubuntu Light';
 }
 
 .right{
     text-align: right;
 }
 
+
+
 #header{
     text-align: center;
+    background-color: #464646;
+    min-height: 150px;
+    margin:0 auto;
+    width: 1080px;
 }
 
 #main_content{
+    width: 1080px;
+    margin: 0 auto;
+    padding:0;
+    clear: both;
+    background-color: #e5e5e5;
     overflow: hidden;
+    
 }
 #left,#right{
     min-height: 300px;
     padding: 0 10px;
     width: 230px;
+}
+#left{
+    float: left;
+    
+    
+}
+#right{
+    float: right;
+   
+    
+}
+#center{
+    margin-left: 250px;
+   
+    margin-right: 250px;
+    width: 560px;
+    padding: 0 10px;
+}
+#pagination{
+    clear: both;
+    text-align: center;
+    
+}
+#pagination p{
+    margin: 0;
+}
+#pagination a{
+    display: inline-block;
+    padding: 3px;
+}
+#footer{
+    text-align: center;
+    background-color: #464646;
+    min-height: 180px;
+    clear: both;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#footer p{
+    margin: 0;
+   
+}
+#center h1{
+    margin: 0;
+    text-align: center;
+}
+#reg table{
+    margin: 0 auto;
+}
+.message{
+    color: red;
+    text-align: center;
+}
+#message p{
+    text-align: center;
+}
+#content{
+    background-color: #2f2f2f;
 }
