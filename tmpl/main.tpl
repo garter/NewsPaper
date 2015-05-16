@@ -40,7 +40,7 @@
                     %middle%
                     %bottom%
                 </div><!--здесь заканчевается div #center-->
-                
+                  %pagination%
             </div><!--здесь заканчевается div #main_content-->
             <div id="footer">
                 <p> Все права защищены © 2015 </p>

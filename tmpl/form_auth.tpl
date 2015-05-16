@@ -1,5 +1,5 @@
 <h2>Вход на сайт</h2>
-%message%
+%message_auth%
 <form name="form_auth" action="#" method="post">
     <table>
         <tr>

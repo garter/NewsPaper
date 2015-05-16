@@ -1,7 +1,7 @@
 
 <div class="article">
     <h1>%title%</h1>
-    <p> <img src="#" alt="Тематическая картина">  %intro_text%</p>
+    <p> <img src="%image_link%" alt="Тематическая картина">  %intro_text%</p>
    
     <p class="right">
         <span >%date%</span>

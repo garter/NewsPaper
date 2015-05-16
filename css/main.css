@@ -7,8 +7,8 @@
 @font-face {
     font-family: "Ubuntu Light";
     src: url("fonts/Ubuntu-Light.ttf");
-    font-style: light;
-    font-weight: normal;
+    font-style: normal;
+    font-weight: light;
 }
 
 body{
