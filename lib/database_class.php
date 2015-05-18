@@ -114,7 +114,18 @@ class DataBase{
         return $this->getField($table_name, $field_out, "id", $id);
     }
     
-    public function getAll($table_name, $order, $up){
+    public function getLastID($table_name){
+        $data = $this->select($table_name, array("MAX(`id`)"));
+        return $data[0]["MAX(`id`)"];
+    }
+
+
+    public function getAllOnField($table_name, $field, $value, $order, $up){
+        return $this->select($table_name, array("*"), "`$field` = '".addslashes($value)."'", $order, $up);
+    }
+            
+    
+        public function getAll($table_name, $order, $up){
         return $this->select($table_name, array("*"), "", $order, $up);
     }
     

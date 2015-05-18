@@ -11,5 +11,8 @@ class Config{
     public $db_pass = "";
     public $admin_n = "Bayram";
     public $admin_e = "bayram88@live.ru";
+    public $dir_text = "lib/text/";
     
+    public $min_login = 3;
+    public $max_login = 255;
 }
