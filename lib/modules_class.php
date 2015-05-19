@@ -1,8 +1,11 @@
 <?php
-function __autoload(){
-    require_once __DIR__ . '_class.php';
-    
-}
+require_once __DIR__.'config_class.php';
+require_once __DIR__.'article_class';
+require_once __DIR__.'section_class';
+require_once __DIR__.'user_class';
+require_once __DIR__.'menu_class';
+require_once __DIR__.'banner_class';
+require_once __DIR__.'message_class';
 
 abstract class Modules{
     
@@ -55,7 +58,7 @@ abstract class Modules{
     abstract protected function getKeyWords();
     abstract protected function getMiddle();
     
-    protected function getMenu(){
+    /*protected function getMenu(){
         $menu = $this->menu->getAll();
         for ($i = 0; $i < count($menu); $i++){
             $sr["title"] = menu[$i]["title"];
@@ -63,7 +66,7 @@ abstract class Modules{
             $text .= $this->getReplaceTemplate($sr, "menu_item");
         }
         return $text;
-    }
+    }*/
     
     protected function getAuthUser(){
         $sr["message_auth"] = "";
@@ -101,7 +104,7 @@ abstract class Modules{
         $replace = array();
         $i = 0;
         foreach ($sr as $key => $value){
-            $search[$i] = $key;
+            $search[$i] = "%$key%";
             $replace[$i] = $value;
             $i++;
         }

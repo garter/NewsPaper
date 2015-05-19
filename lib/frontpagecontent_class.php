@@ -11,4 +11,21 @@ class FrontPageContent extends Modules{
         $this->articles = $this->article->getAllSortDate();
         $this->page = (isset($this->data['page'])) ? $this->data['page'] : 1;
     }
+
+    protected function getDescription() {
+        
+    }
+
+    protected function getKeyWords() {
+        
+    }
+
+    protected function getMiddle() {
+        
+    }
+
+    protected function getTitle() {
+        
+    }
+
 }

@@ -1,8 +1,8 @@
 <?php
 mb_internal_encoding("UTF-8");//установка внутренной кодировкии 
-function __autoload(){
-    require_once __DIR__.'/lib/'.__FILE__.'_class.php';
-}
+require_once '/lib/config_class.php';
+require_once '/lib/database_class.php';
+require_once '/lib/modules_class.php';
 $db = new DataBase();
 $view = $_GET["view"];
 
