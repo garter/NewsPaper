@@ -37,6 +37,56 @@ abstract class Modules{
         return $data;
     }
     
+    public function getContent(){
+        $sr["title"] = $this->getTitle();
+        $sr["meta_desc"] = $this->getDescription();
+        $sr["meta_key"] = $this->getKeyWords();
+        $sr["menu"] = $this->getMenu();
+        $sr["auth_user"] = $this->getAuthUser();
+        $sr["banners"] = $this->getBanners();
+        $sr["top"] = $this->getTop();
+        $sr["middle"] = $this->getMiddle();
+        $sr["bottom"] = $this->getBottom();
+        return $this->getReplaceTemplate($sr, "main");
+    }
+    
+    abstract protected function getTitle();
+    abstract protected function getDescription();
+    abstract protected function getKeyWords();
+    abstract protected function getMiddle();
+    
+    protected function getMenu(){
+        $menu = $this->menu->getAll();
+        for ($i = 0; $i < count($menu); $i++){
+            $sr["title"] = menu[$i]["title"];
+            $sr["link"] = menu[$i]["link"];
+            $text .= $this->getReplaceTemplate($sr, "menu_item");
+        }
+        return $text;
+    }
+    
+    protected function getAuthUser(){
+        $sr["message_auth"] = "";
+        return $this->getReplaceTemplate($sr, "form_auth");
+    }
+    
+    protected function getBanners(){
+        $banners = $this->banner->getAll();
+        for ($i = 0; $i < count($banners); $i++){
+            $sr["code"] = $banners[$i]["code"];
+            $text .= $this->getReplaceTemplate($sr, "banner");
+        }
+        return $text;
+    }
+
+    protected function getTop(){
+        return "";
+    }
+    
+    protected function getBottom(){
+        return "";
+    }
+
     protected function getTemplate($name){
         $text = file_get_contents($this->config->dir_tmpl.$name.".tpl");
         return str_replace("%address%", $this->config->address, $text);
